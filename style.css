@@ -1,0 +1,191 @@
+@import url('https://fonts.google.com/specimen/Manrope');
+:root{
+--SoftCyanFullSliderBar: hsl(174, 77%, 80%);
+--StrongCyanSliderBackround: hsl(174, 86%, 45%);
+--LightGrayishRedDiscountBackground: hsl(14, 92%, 95%);
+--LightRedDiscountText: hsl(15, 100%, 70%);
+--PaleBlueCTAText: hsl(226, 100%, 87%);
+
+--WhitePricingComponentBackground: hsl(0, 0%, 100%);
+--VeryPaleBlueMainBackground: hsl(230, 100%, 99%);
+--LightGrayishBlueEmptySliderBar: hsl(224, 65%, 95%);
+--LightGrayishBlueToggleBackground: hsl(223, 50%, 87%);
+--GrayishBlueText: hsl(225, 20%, 60%);
+--DarkDesaturatedBlueTextAndCTABackground: hsl(227, 35%, 25%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope',sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background:url('images/pattern-circles.svg') no-repeat center top 66px,url("images/bg-pattern.svg") no-repeat;
+    
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    background-color: var(--VeryPaleBlueMainBackground);
+}
+main{
+    margin-bottom: 3rem;
+    
+}
+
+
+.top {
+     margin: 2.7rem  0 5rem 0 ;
+     line-height: 1.6;
+     text-align: center;
+}
+.top h1{
+    color: var(--DarkDesaturatedBlueTextAndCTABackground);
+    font-size: 1.9rem;
+}
+.top p{
+    color: var(--GrayishBlueText);
+}
+.box{
+    width: 120%;
+    padding: 2rem;
+    background-color: var(--WhitePricingComponentBackground);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.flex h1{
+    display: flex;
+    align-items: center;
+    font-size: 2.3rem;
+    color: var(--DarkDesaturatedBlueTextAndCTABackground);
+}
+.flex h1 .slash{
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--GrayishBlueText);
+}
+.flex p{
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--GrayishBlueText);
+}
+input[type="range"]{
+    width: 100%;
+    height: 8px;
+    margin: 1rem 0 2rem;
+    -webkit-appearance: none;
+    outline: none;
+    background: var(--LightGrayishBlueEmptySliderBar);
+    border-radius: 2rem;
+}
+
+input[type="range"]::-moz-range-thumb{
+    width:2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: url('images/icon-slider.svg') no-repeat;
+    background-color: var(--StrongCyanSliderBackround);
+    background-position: center;
+}
+
+input[type="range"]::-moz-range-progress{
+    height: 10px;
+    background-color: var(--SoftCyanFullSliderBar);
+    border-radius: 2rem;
+
+}
+input[type="range"]::-moz-range-thumb:active{
+    box-shadow: 2px 2px 10px 2px var(--StrongCyanSliderBackround);
+}
+.box p{
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    color: var(--GrayishBlueText);
+}
+p .discount{
+    font-size: 14px;
+    padding: 5px 6px 3px ;
+    background-color: var(--LightGrayishRedDiscountBackground);
+    color: var(--LightRedDiscountText);
+    border-radius: 5px;
+    margin-left: 3px;
+}
+input{
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    position: relative;
+    margin: 0 15px;
+    height: 1.8rem;
+    width: 4rem;
+    background-color: var(--LightGrayishBlueToggleBackground);
+    -webkit-appearance: none;
+    border-radius: 20px;
+    transition: .3s ease-in ;
+}
+input:checked[type="checkbox"]{
+    background-color: var(--SoftCyanFullSliderBar);
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    background-color: var(--WhitePricingComponentBackground);
+    border-radius: 50%;
+    transition: .3s ease-in;
+}
+input:checked[type="checkbox"]::before{
+    left:2.5rem;
+}
+
+p > div{
+    margin-top: 2rem;
+}
+
+ul > li{
+    background-image: url('images/icon-check.svg');
+    list-style-type: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--GrayishBlueText);
+}
+
+.flex button{
+    cursor: pointer;
+    border: none;
+    width: 11rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    color: var(--LightGrayishBlueEmptySliderBar);
+    background-color:var(--DarkDesaturatedBlueTextAndCTABackground); 
+}
+
+.flex button:hover{
+    color: var(--WhitePricingComponentBackground);
+}
+
+.flex button:active{
+    transform: scale(1.2);
+}

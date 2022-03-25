@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="top">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required. </p>
+    </section>
+
+    <section class="box">
+      <div class="flex">
+        <p> <span id="views">1</span> k Pageviews</p>
+        <h1>$ <span id="money">2.00</span> <span class="slash">/<span class="time">month</span></span></h1>
+      </div>
+
+      <input type="range" value="50" min="1" max="100">
+      <p>Monthly Billing <input type="checkbox"> Yearly Billing <span class="discount">25% discount</span></p>
+      <div class="flex">
+        <ul>
+          <li>
+            Unlimited websites
+          </li>
+          <li>
+            100% data ownership</li>
+          <li>
+            Email reports</li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ganesh Rathor</a>.
+  </div>
+  
+  <script src='script.js'>
+  </script>
+</body>
+</html>
