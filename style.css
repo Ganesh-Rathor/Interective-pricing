@@ -34,10 +34,6 @@ body{
     flex-direction: column;
     background-color: var(--VeryPaleBlueMainBackground);
 }
-main{
-    margin-bottom: 3rem;
-    
-}
 
 
 .top {
@@ -53,7 +49,7 @@ main{
     color: var(--GrayishBlueText);
 }
 .box{
-    width: 120%;
+    width: 40%;
     padding: 2rem;
     background-color: var(--WhitePricingComponentBackground);
 }
@@ -132,8 +128,8 @@ input{
 input[type="checkbox"]{
     position: relative;
     margin: 0 15px;
-    height: 1.8rem;
-    width: 4rem;
+    height: 1rem;
+    width: 2.5rem;
     background-color: var(--LightGrayishBlueToggleBackground);
     -webkit-appearance: none;
     border-radius: 20px;
@@ -145,8 +141,8 @@ input:checked[type="checkbox"]{
 
 input[type="checkbox"]::before{
     content: "";
-    width: 1.3rem;
-    height: 1.3rem;
+    width: .6rem;
+    height: .6rem;
     position: absolute;
     left: 4px;
     top: 3px;
@@ -155,7 +151,7 @@ input[type="checkbox"]::before{
     transition: .3s ease-in;
 }
 input:checked[type="checkbox"]::before{
-    left:2.5rem;
+    left:1.7rem;
 }
 
 p > div{
@@ -189,4 +185,31 @@ ul > li{
 
 .flex button:active{
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 1100px) {
+    .box{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .box{
+        width: 90%;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .time{
+        font-size: 11px;
+    }
+    .discount{
+        font-size: 9px;
+    }
+    .top{
+        margin-top: 13rem;
+    }
+    .top h1{
+        font-size: 1.4;
+    }
 }
