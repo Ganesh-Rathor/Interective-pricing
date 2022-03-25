@@ -14,11 +14,14 @@ let pageView = Vcounter;
 
 checkBox.addEventListener("change",(e)=>{
     if(!e.target.checked){
+        Mcounter = 2;
+        Vcounter = 10;
         time.innerHTML = "month";
     }
     else{
         Mcounter = 16;
         Vcounter = 45;
+        time.innerHTML = "Year";
     }
 })
 

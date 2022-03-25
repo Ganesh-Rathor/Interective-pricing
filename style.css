@@ -91,7 +91,8 @@ input[type="range"]{
     border-radius: 2rem;
 }
 
-input[type="range"]::-moz-range-thumb{
+
+#slid::-moz-range-thumb{
     width:2rem;
     height: 2rem;
     border-radius: 50%;
